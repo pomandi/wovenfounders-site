@@ -4,15 +4,16 @@
   var EP = '/api/track', K = 'wf_', consent = null;
   try { consent = localStorage.getItem(K + 'consent'); } catch (e) {}
   function rid(p) { return p + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 12); }
-  function store() { return consent === 'yes' ? localStorage : sessionStorage; }
-  function vid() { try { var s = store(), v = s.getItem(K + 'vid') || sessionStorage.getItem(K + 'vid'); if (!v) v = rid('wf_'); s.setItem(K + 'vid', v); return v; } catch (e) { return rid('wf_tmp_'); } }
-  function sid() { try { var s = sessionStorage.getItem(K + 'sid'); if (!s) { s = rid('session_'); sessionStorage.setItem(K + 'sid', s); } return s; } catch (e) { return rid('session_'); } }
+  var mem = { vid: rid('wf_'), sid: rid('session_') };
+  // Without consent nothing is written to the device: ids live in memory for this page view only.
+  function vid() { if (consent !== 'yes') return mem.vid; try { var v = localStorage.getItem(K + 'vid'); if (!v) { v = mem.vid; localStorage.setItem(K + 'vid', v); } return v; } catch (e) { return mem.vid; } }
+  function sid() { if (consent !== 'yes') return mem.sid; try { var s = sessionStorage.getItem(K + 'sid'); if (!s) { s = mem.sid; sessionStorage.setItem(K + 'sid', s); } return s; } catch (e) { return mem.sid; } }
   function utm() {
     var q = new URLSearchParams(location.search), o = {}, has = false;
     ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid', 'src'].forEach(function (k) { var v = q.get(k); if (v) { o[k] = v; has = true; } });
     if (!o.utm_source && o.fbclid) { o.utm_source = 'facebook'; o.utm_medium = o.utm_medium || 'paid'; }
     if (!o.utm_source && o.gclid) { o.utm_source = 'google'; o.utm_medium = o.utm_medium || 'ppc'; }
-    try { if (has) sessionStorage.setItem(K + 'utm', JSON.stringify(o)); else o = JSON.parse(sessionStorage.getItem(K + 'utm') || '{}'); } catch (e) {}
+    if (consent === 'yes') { try { if (has) sessionStorage.setItem(K + 'utm', JSON.stringify(o)); else o = JSON.parse(sessionStorage.getItem(K + 'utm') || '{}'); } catch (e) {} }
     return o;
   }
   function br() { var u = navigator.userAgent; return /Edg\//.test(u) ? 'Edge' : /Chrome/.test(u) ? 'Chrome' : /Firefox/.test(u) ? 'Firefox' : /Safari/.test(u) ? 'Safari' : 'Unknown'; }
@@ -54,7 +55,7 @@
   var cb = document.getElementById('cb');
   function setC(x) {
     consent = x;
-    try { localStorage.setItem(K + 'consent', x); if (x === 'yes') localStorage.setItem(K + 'vid', vid()); else localStorage.removeItem(K + 'vid'); } catch (e) {}
+    try { localStorage.setItem(K + 'consent', x); if (x === 'yes') { localStorage.setItem(K + 'vid', mem.vid); sessionStorage.setItem(K + 'sid', mem.sid); } else { localStorage.removeItem(K + 'vid'); sessionStorage.removeItem(K + 'sid'); } } catch (e) {}
     cb.hidden = true; track('cookie_consent', { choice: x });
     if (x === 'yes') wfPixel();
   }
@@ -72,6 +73,7 @@
     h1.innerHTML = 'Je keek net naar <em>AI</em>.';
     var lead = document.getElementById('lead');
     if (lead) lead.textContent = 'Die AI draait elke dag in onze eigen 3 winkels. Nu bekijkt ze jouw zaak, gratis, voor 3 modezaken in Vlaanderen.';
+    var rh = document.getElementById('realh'); if (rh) rh.textContent = 'De man in de video bestaat echt.';
   }
 
   // Seats + optional hero loop video
