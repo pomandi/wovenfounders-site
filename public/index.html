@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gratis AI-analyse van jouw modezaak | Woven Founders</title>
+<meta name="description" content="We bekijken je website, Google-profiel, Instagram en concurrenten en schrijven een 90-dagenplan. Gratis voor 3 modezaken in Vlaanderen. Elke analyse lezen we zelf na.">
+<link rel="canonical" href="https://wovenfounders.com/">
+<meta property="og:title" content="Die video was AI. Ik niet.">
+<meta property="og:description" content="Gratis AI-analyse van jouw modezaak, voor 3 mode-ondernemers in Vlaanderen.">
+<meta property="og:image" content="https://wovenfounders.com/a/og.jpg">
+<meta property="og:url" content="https://wovenfounders.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#101B2C">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="preload" href="/a/f/Fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/a/f/InstrumentSans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/a/avatar.jpg" as="image">
+<link rel="stylesheet" href="/a/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Woven Founders">
+      <svg viewBox="125 125 830 830" aria-hidden="true"><use href="#mark"/></svg>
+      <span>Woven Founders</span>
+    </a>
+    <a class="btn btn-sm" href="#start" data-cta="header">Gratis analyse</a>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 · HERO -->
+<section class="hero weave" id="start">
+  <div class="wrap hero-grid">
+    <figure class="avatar">
+      <span class="ai-tag">AI</span>
+      <img src="/a/avatar.jpg" alt="AI-avatar van Nurullah, oprichter van Woven Founders" width="900" height="1125">
+      <video id="avvid" muted playsinline loop preload="none" aria-hidden="true"></video>
+      <figcaption>AI-avatar van Nurullah · gemaakt met onze eigen AI</figcaption>
+    </figure>
+
+    <div class="hero-copy">
+      <p class="kicker">Voor mode-ondernemers in Vlaanderen</p>
+      <h1 id="h1" class="display">Wij gebruiken AI in onze <em>eigen</em> modezaak.</h1>
+      <p class="lead" id="lead">Elke dag, in onze 3 winkels: voor advertenties, klantberichten en afspraken. Nu bekijkt diezelfde AI jouw zaak, gratis, voor 3 modezaken in Vlaanderen.</p>
+
+      <form class="card form" id="f" novalidate autocomplete="on">
+        <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+        <fieldset class="step" data-step="1">
+          <legend>Welke zaak mogen we bekijken?</legend>
+          <label for="zaak">Naam van je zaak</label>
+          <input id="zaak" name="zaak" required autocomplete="organization" placeholder="Bv. Boetiek Marie">
+          <label for="gemeente">Gemeente</label>
+          <input id="gemeente" name="gemeente" required autocomplete="address-level2" placeholder="Bv. Hasselt">
+          <button class="btn btn-full" type="button" data-next="2">Bekijk mijn zaak →</button>
+        </fieldset>
+
+        <fieldset class="step" data-step="2" hidden>
+          <legend>Waar vinden klanten je online?</legend>
+          <label for="online">Website of Instagram <span>(één van de twee is genoeg)</span></label>
+          <input id="online" name="online" inputmode="url" placeholder="jouwzaak.be of @jouwzaak">
+          <label class="chip-line"><input type="checkbox" id="geenweb" name="geenweb"> <span class="chip">Ik heb nog geen website</span></label>
+          <div class="row-btn">
+            <button class="btn-link" type="button" data-prev="1">← terug</button>
+            <button class="btn" type="button" data-next="3">Verder →</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="3" hidden>
+          <legend>Waar sturen we je rapport naartoe?</legend>
+          <label for="naam">Jouw naam</label>
+          <input id="naam" name="naam" required autocomplete="name">
+          <div class="toggle" role="radiogroup" aria-label="Kanaal">
+            <label><input type="radio" name="kanaal" value="whatsapp" checked> <span>WhatsApp</span></label>
+            <label><input type="radio" name="kanaal" value="email"> <span>E-mail</span></label>
+          </div>
+          <input id="contact" name="contact" type="tel" inputmode="tel" autocomplete="tel" placeholder="+32 4.. .. .. ..">
+          <p class="small">Grootste uitdaging? <span>(optioneel)</span></p>
+          <div class="chips">
+            <label><input type="checkbox" name="uitdaging" value="te weinig klanten"><span class="chip">te weinig klanten</span></label>
+            <label><input type="checkbox" name="uitdaging" value="geen tijd voor Instagram"><span class="chip">geen tijd voor Instagram</span></label>
+            <label><input type="checkbox" name="uitdaging" value="advertenties werken niet"><span class="chip">advertenties werken niet</span></label>
+          </div>
+          <div class="hp" aria-hidden="true"><label>Laat leeg<input name="bedrijfsfax" tabindex="-1" autocomplete="off"></label></div>
+          <label class="check"><input type="checkbox" name="akkoord" id="akkoord"> <span>Ik vraag de analyse aan. Woven Founders mag mijn gegevens hiervoor gebruiken en mij contacteren. <a href="/privacy">Privacy</a></span></label>
+          <div class="row-btn">
+            <button class="btn-link" type="button" data-prev="2">← terug</button>
+            <button class="btn" type="submit" id="send">Vraag mijn analyse aan</button>
+          </div>
+        </fieldset>
+
+        <div class="done" hidden>
+          <img src="/a/ik.jpg" alt="Nurullah" width="96" height="120" loading="lazy">
+          <div>
+            <p class="display done-title">Bedankt, je aanvraag is binnen.</p>
+            <p>Ik bekijk je zaak zelf en stuur je binnen 2 werkdagen een bericht. — Nurullah</p>
+          </div>
+        </div>
+        <p class="msg" id="msg" role="status"></p>
+        <p class="micro">2 minuten · geen verplichting · <span id="seats">we kiezen 3 zaken</span></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · RAPPORT -->
+<section class="paper-bg" id="rapport">
+  <div class="wrap">
+    <p class="kicker dark">Geen praatje, een rapport</p>
+    <h2 class="display">Zo ziet jouw rapport eruit.</h2>
+    <p class="sub">Dit voorbeeld maakten we van onze eigen zaak, geanonimiseerd. Echte cijfers, ook de slechte.</p>
+
+    <div class="pages" id="pages">
+      <article class="page tilt">
+        <header class="ph"><span class="mini-mark"><svg viewBox="125 125 830 830"><use href="#mark"/></svg></span><span>AI-analyse · voorbeeld</span></header>
+        <h3 class="display">Zaak A — herenmode, Vlaanderen</h3>
+        <p class="meta">openbare gegevens van 16-10-2026 · 3 winkels + webshop · scores op 10</p>
+        <div class="rings">
+          <div class="ring" style="--v:6"><b data-n="6">0</b><span>Website</span></div>
+          <div class="ring" style="--v:4"><b data-n="4">0</b><span>Google</span></div>
+          <div class="ring" style="--v:5"><b data-n="5">0</b><span>Reviews</span></div>
+          <div class="ring low" style="--v:2"><b data-n="2">0</b><span>Instagram</span></div>
+          <div class="ring" style="--v:6"><b data-n="6">0</b><span>Advertenties</span></div>
+        </div>
+        <div class="leak"><b>Grootste lek:</b> Instagram. Bijna 9 posts per week voor gemiddeld 1 like per post (0,01%). Die uren leveren vandaag geen klanten op.</div>
+      </article>
+
+      <article class="page tilt">
+        <header class="ph"><span class="mini-mark"><svg viewBox="125 125 830 830"><use href="#mark"/></svg></span><span>Bevindingen</span></header>
+        <ol class="finds">
+          <li><b>Op de gsm verschijnt het eerste beeld pas na 10,6 seconden.</b> Goed is onder 2,5 s.<span class="hand">← hier haken bezoekers af</span></li>
+          <li><b>Voor "trouwkostuum" staat de zaak op pagina 2 van Google.</b> Wie de naam nog niet kent, vindt de zaak nauwelijks.<span class="hand">duizenden zoekopdrachten per jaar</span></li>
+          <li><b>Reviews van 2026: gemiddeld 3,2.</b> Totaal 4,1 over 459 reviews. Er komen minder goede bij, niet meer slechte.<span class="hand">tevreden klanten zelf vragen</span></li>
+        </ol>
+      </article>
+
+      <article class="page tilt">
+        <header class="ph"><span class="mini-mark"><svg viewBox="125 125 830 830"><use href="#mark"/></svg></span><span>Jouw 90-dagenplan</span></header>
+        <div class="month">
+          <h4>Maand 1 — fundament</h4>
+          <ul><li>Site snel maken op de gsm</li><li>Review-vraag in de winkel (QR bij spiegel en kassa)</li><li>Google-profiel: elke week een post en foto's</li></ul>
+        </div>
+        <div class="locked">
+          <div class="month blur"><h4>Maand 2 — content die werkt</h4><ul><li>xxxxxxxxx xxxxxx xxxxxxx</li><li>xxxxxxx xxxxxxxxx xxx</li></ul></div>
+          <div class="month blur"><h4>Maand 3 — groei</h4><ul><li>xxxxxxxxxxx xxxxxx xxxx</li><li>xxxxxx xxxxxxx xxxxxx</li></ul></div>
+          <div class="lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1v11H6V10h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg><span>Dit deel schrijven we voor <em>jouw</em> zaak.</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="center"><a class="btn" href="#start" data-cta="rapport">Ik wil dit voor mijn zaak</a></p>
+  </div>
+</section>
+
+<!-- 3 · BEWIJS -->
+<section class="weave proof">
+  <div class="wrap">
+    <p class="kicker">Geen belofte, het draait al</p>
+    <h2 class="display light">Dit doet onze AI nu al, in onze eigen winkels.</h2>
+    <div class="proof-grid">
+      <div class="pcard chat">
+        <p class="plabel">WhatsApp-agent · echt gesprek, naam weggelaten</p>
+        <div class="bubble in">Goede avond, we zijn op zoek naar een pak voor drie personen voor de boerenbruiloft.</div>
+        <div class="bubble out">Goedemorgen, bedankt voor uw bericht. Ik zie uw afspraak op donderdag 15 oktober om 19u50 staan. Met drie personen is geen probleem, we houden er rekening mee.<span class="ai-mini">AI</span></div>
+        <p class="pstat"><b>61</b> antwoorden aan <b>46</b> klanten <small>25/08 – 15/10/2026</small></p>
+      </div>
+      <div class="pcard big">
+        <p class="plabel">Online afspraken</p>
+        <p class="bignum" data-count="1026">1.026</p>
+        <p>afspraken via onze website en advertenties in 2026, opgevolgd door onze agents.</p>
+        <small>bron: eigen afsprakensysteem, 1/1 – 15/10/2026</small>
+      </div>
+      <div class="pcard">
+        <p class="plabel">AI-receptionist · in test</p>
+        <p class="display mid">"Goedemiddag, waarmee kan ik u helpen?"</p>
+        <p>Neemt de telefoon op, beantwoordt vragen en plant afspraken in. We testen hem nu in onze eigen winkel, nog niet bij klanten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · ECHT -->
+<section class="real">
+  <div class="wrap real-grid">
+    <figure class="photo">
+      <img src="/a/ik.jpg" alt="Nurullah in zijn modezaak" width="1000" height="1250" loading="lazy">
+      <figcaption>Echte foto, in onze winkel. Geen AI.</figcaption>
+    </figure>
+    <div>
+      <p class="kicker dark">Wie zit erachter</p>
+      <h2 class="display">De man in de video bestaat echt.</h2>
+      <p>Ik ben Nurullah. Ik run een modezaak met 3 winkels in Limburg en Antwerpen. Ik ken de zaterdagen dat de winkel leeg blijft, en de avonden achter Instagram.</p>
+      <p>De AI die je net zag, gebruik ik elke dag in onze eigen zaak: voor advertenties, klantberichten en afspraken. Met Woven Founders breng ik mode-ondernemers samen die dat ook willen.</p>
+      <p><b>Elke analyse lees ik zelf na.</b> De AI doet het opzoekwerk, wij schrijven het advies.</p>
+      <p class="sign">Nurullah</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · WAAROM GRATIS -->
+<section class="paper-bg slim">
+  <div class="wrap narrow">
+    <h2 class="display">Waarom gratis?</h2>
+    <p>We zoeken de eerste 3 zaken om mee te starten. Na het rapport stellen we een samenwerking voor. <b>De prijs bespreken we pas na het rapport, zonder verplichting.</b> Zeg je nee, dan hou je het rapport gewoon.</p>
+    <p class="center"><a class="btn" href="#start" data-cta="gratis">Vraag je analyse aan</a></p>
+  </div>
+</section>
+
+<!-- 6 · FAQ -->
+<section class="faq">
+  <div class="wrap narrow">
+    <h2 class="display">Vragen</h2>
+    <details><summary>Wie leest mijn analyse?</summary><p>Ik, Nurullah, samen met één collega. De AI verzamelt de publieke gegevens (website, Google, Instagram, advertentiebibliotheken). Het advies schrijven en controleren we zelf. We vragen geen wachtwoorden en krijgen geen toegang tot je accounts.</p></details>
+    <details><summary>Wat kost het daarna?</summary><p>De analyse is gratis. Wil je daarna verder, dan bespreken we samen wat zinvol is en wat het kost. Je zit nergens aan vast.</p></details>
+    <details><summary>Wat gebeurt er met mijn gegevens?</summary><p>We gebruiken ze alleen om de analyse te maken en je te contacteren. We verkopen niets door. Aanvragen zonder samenwerking verwijderen we na 12 maanden. Meer in de <a href="/privacy">privacyverklaring</a>.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="/"><svg viewBox="125 125 830 830" aria-hidden="true"><use href="#mark"/></svg><span>Woven Founders</span></a>
+      <p class="slogan display">Eén draad breekt. Samen houden we stand.</p>
+    </div>
+    <div class="legal-id">
+      <p>Woven Founders is een initiatief van Asia Fam BV<br>Vennestraat 331, 3600 Genk · KBO 0791.452.593</p>
+      <p><a href="mailto:info@wovenfounders.com">info@wovenfounders.com</a> · <a href="/privacy">Privacy &amp; cookies</a> · <a href="#" id="cbopen">Cookie-instellingen</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky" href="#start" data-cta="sticky">Gratis analyse <span id="seats2">· 3 zaken</span></a>
+
+<div id="cb" role="dialog" aria-label="Cookies" hidden>
+  <p><b>Cookies</b> — We meten hoe deze pagina gebruikt wordt met een tijdelijke bezoekcode, zonder je naam te kennen. Met jouw toestemming onthouden we je bezoek ook later en meten we onze advertenties. <a href="/privacy">Meer info</a></p>
+  <div class="b"><button id="cbn" type="button">Weigeren</button><button id="cby" class="y" type="button">Accepteren</button></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="mark"><g transform="rotate(45 540 540) translate(540 540) scale(0.88) translate(-540 -540)"><rect x="211" y="281" width="658" height="150" rx="10" fill="#CFAE52"/><rect x="211" y="465" width="658" height="150" rx="10" fill="#CFAE52"/><rect x="211" y="649" width="658" height="150" rx="10" fill="#CFAE52"/><rect x="281" y="211" width="150" height="658" rx="10" fill="#F1E9DA"/><rect x="465" y="211" width="150" height="658" rx="10" fill="#F1E9DA"/><rect x="649" y="211" width="150" height="658" rx="10" fill="#F1E9DA"/><rect x="267" y="281" width="178" height="150" fill="#CFAE52"/><rect x="465" y="267" width="150" height="178" fill="#F1E9DA"/><rect x="635" y="281" width="178" height="150" fill="#CFAE52"/><rect x="281" y="451" width="150" height="178" fill="#F1E9DA"/><rect x="451" y="465" width="178" height="150" fill="#CFAE52"/><rect x="649" y="451" width="150" height="178" fill="#F1E9DA"/><rect x="267" y="649" width="178" height="150" fill="#CFAE52"/><rect x="465" y="635" width="150" height="178" fill="#F1E9DA"/><rect x="635" y="649" width="178" height="150" fill="#CFAE52"/></g></g>
+  </defs>
+</svg>
+<script src="/a/wf.js" defer></script>
+</body>
+</html>
